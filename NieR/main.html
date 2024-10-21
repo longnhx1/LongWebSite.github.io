@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhạc NieR</title>
+    <style>
+        .ls-music {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+       
+    <div style="text-align: center;">
+        <h1>Các bài nhạc về của game NieR:Automata</h1>
+        <hr> 
+        <ul class="ls-music">
+            <li>
+                <h4>Weight of the World</h4>
+                <audio src="../audio/nier/Weight of the World-壊レタ世界ノ歌.mp3" controls type="audio/mp3"></audio>
+            </li>
+            <li>
+                <h4>意味-無-ジュニーク･ニコール</h4>
+                <audio src="../audio/nier/意味-無-ジュニーク･ニコール.mp3" controls type="audio/mp3"></audio>
+            </li>
+            <li>
+                <h4>曖昧ナ希望-翠雨</h4>
+                <audio src="../audio/nier/曖昧ナ希望-翠雨" controls type="audio/mp3"></audio>
+            </li>
+            <li>
+                <h4>生マレ出ヅル意思</h4>
+                <audio src="../audio/nier/生マレ出ヅル意思.mp3" controls type="audio/mp3"></audio>
+            </li>
+            <li>
+                <h4>砂塵ノ記憶</h4>
+                <audio src="../audio/nier/砂塵ノ記憶.mp3" controls type="audio/mp3"></audio>
+            </li>
+            
+            <li>
+                <h4>穏ヤカナ眠リ</h4>
+                <audio src="../audio/nier/穏ヤカナ眠リ.mp3" controls type="audio/mp3"></audio>
+            </li>
+            <li>
+                <h4>美シキ歌</h4>
+                <audio src="../audio/nier/美シキ歌.mp3" controls type="audio/mp3"></audio>
+            </li>
+            <li>
+                <h4>遊園施設</h4>
+                <audio src="../audio/nier/遊園施設.mp3" controls type="audio/mp3"></audio>
+            </li>
+            <li>
+                <h4>遺サレタ場所-斜光</h4>
+                <audio src="../audio/nier/遺サレタ場所-斜光.mp3" controls type="audio/mp3"></audio>
+            </li>
+            <li>
+                <h4>遺サレタ場所_遮光</h4>
+                <audio src="../audio/nier/遺サレタ場所_遮光.mp3" controls type="audio/mp3"></audio>
+            </li>
+
+            <button></button>
+        </ul>
+    </div>
+    <script>
+        // Lấy tất cả các phần tử audio
+        const audioElements = document.querySelectorAll('audio');
+
+        // Lắng nghe sự kiện play trên từng thẻ audio
+        audioElements.forEach(audio => {
+            audio.addEventListener('play', () => {
+                // Khi phát một bài nhạc, tắt tất cả các bài khác
+                audioElements.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0;  // Đặt lại thời gian phát về 0
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
