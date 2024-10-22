@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(171, 248, 248);
+        }
+
+        .main {
+            background-color: rgb(255, 255, 255);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0 auto;
+            width: 500px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .love {
+            border-radius: 5px;
+            text-align: center;
+            margin: 0px 0px 10px 0px;
+            background-color: rgb(255, 99, 8);
+            color: white;
+            padding: 10px 0;
+        }
+
+        .info span {
+            color: rgb(6, 3, 189);
+            margin-right: 10px;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] { /* chỉnh độ rộng box của input*/
+            padding: 5px;
+            width: 250px;
+            margin-bottom: 5px;
+        }
+
+        /* Căn chỉnh Sở thích và bảng checkbox */
+        .sothich-container {
+            margin-bottom: 20px;
+        }
+
+        .so-thich {
+            margin-right: 10px;
+            font-weight: bold;
+            color: rgb(6, 3, 189);
+        }
+
+        table.list-sothich {
+            border-spacing: 30px 12px; /* độ rộng cho table thông số đầu chỉnh độ ngang thông số sau chỉnh dọc */
+            width: 90%;
+        }
+
+        table.list-sothich td {
+            text-align: left;
+            padding: 5px;
+        }
+
+        table.list-sothich input {
+            margin-right: 5px;
+        }
+
+        .buttoms {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buttoms input {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form method="post" action="">
+            <h3 class="love">SỞ THÍCH CỦA BẠN</h3>
+
+            <div class="info">
+                <span>Họ và tên</span> <input type="text" name="name" id=""> <br>
+                <span>Email</span> <input type="text" name="Email"> <br>
+            </div>
+
+            <div class="sothich-container">
+                <span class="so-thich">Sở thích</span>
+                <table class="list-sothich">
+                    <tr>
+                        <td><input type="checkbox"> Thể thao</td>
+                        <td><input type="checkbox" name="" id=""> Âm nhạc</td>
+                        <td><input type="checkbox" name="" id=""> Đọc sách</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""> Lướt web</td>
+                        <td><input type="checkbox" name="" id=""> Chơi game</td>
+                        <td><input type="checkbox" name="" id=""> Điện ảnh</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""> Du lịch</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="buttoms"> 
+                <input type="submit" value="Gửi thông tin" name="submit" id="">
+                <input type="reset" value="Nhập lại" name="reset" id="">
+            </div>
+        </form>  
+    </div>  
+</body>
+</html>

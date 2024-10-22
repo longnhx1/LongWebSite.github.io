@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+        .main {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0 auto;
+            width: 500px;
+            background-color: aqua;
+            padding: 20px;
+        }
+
+        .sign {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            background-color: yellow;
+            padding: 5px 0px 5px 0px;
+            font-weight: 100px;
+            color: black;
+        }
+
+        .info {
+            background-color: white;
+            padding: 10px;
+        }
+
+        .name {
+            margin-right: 30px;
+        }
+
+        .dirthofday, .gender {
+            margin-right: 34px;
+        }
+
+        .address {
+            margin-right: 50px;
+        }
+
+        input[type="text"].address {
+            width: 40%px;
+            padding: 10px;
+        }
+
+        div label {
+            margin-right: 67px;
+        }
+
+        .Email {
+            margin-right: 59px;
+        }
+
+        .buttoms {
+            margin-left: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main"> 
+        
+        <div class="info">
+            <label class="sign">ĐĂNG KÝ HỌC VIÊN</label>
+            <form method="post" action="">
+                <label class="name" for="name">Họ và tên</label> 
+                <input type="text" size="30px" name="name" id="name"> <br>
+                
+                <label class="dirthofday" for="birthofday">Ngày sinh</label>
+                <input type="date" name="birthofday" id="birthofday"><br>
+                
+                <label class="gender"> Giới tính</label>
+                <input type="radio" name="gender" id="m">
+                <label for="m">Nam</label>
+                <input type="radio" name="gender" id="f">
+                <label for="f">Nữ</label> <br>
+                
+                <label class="address" for="address">Địa chỉ</label> 
+                <input class="address" type="text" id="address"><br>
+                
+                <label for="classroom">Lớp: </label>
+                <select name="classroom" id="classrooom">
+                    <option value="1">23DTHJA1</option>
+                    <option value="2">23DTHJA2</option>
+                    <option value="3">23DTHJA3</option>
+                </select>
+                <br>
+                
+                <label class="Email" for="email">Email</label> 
+                <input type="email" name="email" id="email"><br>
+                
+                <div class="buttoms">
+                    <input type="submit" value="Đăng ký"> 
+                    <input type="reset" value="Nhập lại">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
